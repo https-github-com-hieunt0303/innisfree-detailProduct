@@ -33,8 +33,7 @@
     display: grid;
     grid-template-columns: 35% 20% 20% 25%;
 }
-.btn-add-to-cart{
-    background-color:#024137 ;
+.btn-feature{
     border: 1px solid transparent;
     color: white;
     width: 100%;
@@ -42,12 +41,17 @@
     font-size: 20px;
     margin-top: 20px;
 }
-.btn-check-in-shop{
-    background-color:#ddab0a ;
-    border: 1px solid transparent;
-    color: white;
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    margin-top: 20px;
+/* tablet : width >= 740px , <1024px */
+@media screen and (min-width:739px) and (max-width:1023px) {
+   
+}
+
+/* mobile : width< 740px */
+@media screen and  (max-width:740px) {
+    .wrapper{
+        display: inline;
+    }
+    .right-grid-dp{
+        
+    }
 }

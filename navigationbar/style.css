@@ -1,0 +1,86 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-list li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #111;
+}
+
+/* mobile nav */
+
+.nav-bars-btn {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(85, 106, 124);
+    display: none;
+}
+
+.nav {
+    background-color: rgb(86, 122, 110);
+    display: inline-flex;
+    width: 100%;
+}
+
+@media (max-width:1000px) {
+    .nav-bars-btn {
+        display: block;
+    }
+    .nav-pc {
+        display: none;
+    }
+}
+
+.nav-mobile{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(84, 100, 105);
+    width: 300px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s,opacity linear 0.2s;
+}
+#overlay{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(216, 208, 208,0.5);
+    display: none;
+    animation:animation-overlay linear 0.2s ;
+}
+#checkbox-nav-input:checked ~ #overlay{
+    display: block;
+}
+#checkbox-nav-input:checked ~ .nav-mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@keyframes animation-overlay {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
